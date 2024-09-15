@@ -1,0 +1,8 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © LvNThL
+
+//@version=5
+indicator("Inverted DXY w/ Offset", overlay = true)
+[_c] = request.security(input.symbol("1/DXY"), "", [close])
+_offset = input.int(0, "Offset")
+plot(_c, "Close", offset = _offset)
